@@ -1,0 +1,13 @@
+{{!-- Note now we can use Handlebars to reference key/val pairs passed in --}}
+<h1>{{h1Text}}</h1>
+
+{{!-- Also note the syntax for looping through an array that is passed in as a part of our data object --}}
+{{#each resultsArray}}
+	<div>
+		{{!-- resultsArray was an array of objects... so therefore when we loop through using the Handlebars each, we can access the inner object's values for each loop through --}}
+		<p>Title: {{title}}</p>
+		<p>Link: {{link}}</p>
+		<p>Saved: {{saved}}</p>
+	</div>
+	<br /><br />
+{{/each}}
